@@ -1,0 +1,47 @@
+require 'telegram/bot/types/audio'
+require 'telegram/bot/types/animation'
+require 'telegram/bot/types/sticker'
+require 'telegram/bot/types/game'
+require 'telegram/bot/types/photo_size'
+require 'telegram/bot/types/mask_position'
+require 'telegram/bot/types/video'
+require 'telegram/bot/types/video_note'
+require 'telegram/bot/types/chat'
+require 'telegram/bot/types/chat_member'
+require 'telegram/bot/types/chat_photo'
+require 'telegram/bot/types/contact'
+require 'telegram/bot/types/location'
+require 'telegram/bot/types/venue'
+require 'telegram/bot/types/invoice'
+require 'telegram/bot/types/successful_payment'
+require 'telegram/bot/types/order_info'
+require 'telegram/bot/types/shipping_address'
+require 'telegram/bot/types/file'
+require 'telegram/bot/types/voice'
+require 'telegram/bot/types/user'
+require 'telegram/bot/types/message'
+require 'telegram/bot/types/message_entity'
+require 'telegram/bot/types/webhook_info'
+require 'telegram/bot/types/update'
+require 'telegram/bot/types/inline_query'
+require 'telegram/bot/types/chosen_inline_result'
+require 'telegram/bot/types/callback_query'
+require 'telegram/bot/types/shipping_query'
+require 'telegram/bot/types/pre_checkout_query'
+require 'telegram/bot/types/user_profile_photos'
+require 'telegram/bot/types/sticker_set'
+require 'telegram/bot/types/inline_keyboard_markup'
+require 'telegram/bot/types/inline_keyboard_button'
+require 'telegram/bot/types/callback_game'
+require 'telegram/bot/types/reply_keyboard_markup'
+require 'telegram/bot/types/keyboard_button'
+require 'telegram/bot/types/reply_keyboard_remove'
+require 'telegram/bot/types/force_reply'
+
+module Telegram
+  module Bot
+    module Types
+
+    end
+  end
+end
