@@ -87,7 +87,7 @@ module Telegram::Bot::Types
     end
 
     def photo=(attributes)
-      @photo = PhotoSize.new(attributes)
+      @photo = attributes.map {|photo| PhotoSize.new(photo)}
     end
 
     def sticker=(attributes)
