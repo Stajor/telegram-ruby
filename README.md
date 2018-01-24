@@ -88,6 +88,16 @@ In your handler you can use helper accessors
 
 **command** - current command if found in message text (without prefix cmd_)
 
+### Send Photo
+From url
+```
+api.sendPhoto([Chat id], [Url to image], {caption: 'Image caption'})
+```
+From server
+```
+api.sendPhoto([Chat id], Faraday::UploadIO.new([patg to image], 'image/png', 'my_image.png'), {caption: 'Image caption'})
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Stajor/telegram-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
