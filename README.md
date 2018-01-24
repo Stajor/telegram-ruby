@@ -35,6 +35,7 @@ require 'telegram/bot'
 Telegram::Bot.configure do |conf|
     conf.token = 'Here your token'
     conf.raise_exceptions = false #By default true
+    conf.name = '@MyBot
 end
 ```
     

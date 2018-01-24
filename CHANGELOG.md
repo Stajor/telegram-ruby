@@ -1,7 +1,7 @@
 # Changelog
 
 ## 0.1.2
-- Fix photo setter in Telegram::Bot::Types::Message
+- Add 'name' to configuration
 - Update README.md
 
 ## 0.1.1
