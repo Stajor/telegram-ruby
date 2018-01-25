@@ -48,7 +48,7 @@ module Telegram::Bot
     end
 
     def pull_command(text)
-      text =  text.gsub(Telegram::Bot.configuration.name, '') if Telegram::Bot.configuration.name
+      text =  text.gsub(Telegram::Bot.configuration.name, '') if Telegram::Bot.configuration.name && !text.nil?
       !text.nil? && text.index('/') == 0 ? text.downcase.split(' ').first.gsub('/', '') : nil
     end
   end
