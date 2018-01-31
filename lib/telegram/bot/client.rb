@@ -7,6 +7,7 @@ module Telegram::Bot
     def initialize(handler)
       @handler = handler.new
       @handler.api = Telegram::Bot::Api.new
+      @handler.botan = Telegram::Bot::Botan.new
     end
 
     def handle(params)

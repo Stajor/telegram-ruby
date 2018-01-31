@@ -8,6 +8,7 @@ require 'telegram/bot/api'
 require 'telegram/bot/types'
 require 'telegram/bot/client'
 require 'telegram/bot/client_accessors'
+require 'telegram/bot/botan'
 
 module Telegram
   module Bot

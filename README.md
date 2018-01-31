@@ -35,7 +35,8 @@ require 'telegram/bot'
 Telegram::Bot.configure do |conf|
     conf.token = 'Here your token'
     conf.raise_exceptions = false #By default true
-    conf.name = '@MyBot
+    conf.name = '@MyBot'
+    conf.botan_token = 'Botan token' #If using botan.io
 end
 ```
     
@@ -87,7 +88,9 @@ In your handler you can use helper accessors
 
 **message** - This [object](https://core.telegram.org/bots/api#message) represents a message.
 
-**command** - current command if found in message text (without prefix cmd_)
+**command** - Current command if found in message text (without prefix cmd_)
+
+**botan** - This object represents a [botan](http://botan.io) integration
 
 ### Send Photo
 From url
@@ -97,6 +100,20 @@ api.sendPhoto([Chat id], [Url to image], {caption: 'Image caption'})
 From server
 ```
 api.sendPhoto([Chat id], Faraday::UploadIO.new([patg to image], 'image/png', 'my_image.png'), {caption: 'Image caption'})
+```
+
+### Botan
+
+The most advanced analytics for your Telegram bot.
+See more information on [botan.io](http://botan.io)
+
+Usage
+```
+botan = Telegram::Bot::Botan([appmetrica-token])
+uid = 123
+message = 'text'
+name = 'search'
+botan.track(uid, message, name)
 ```
 
 ## Contributing
