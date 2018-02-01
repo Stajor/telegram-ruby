@@ -8,6 +8,8 @@ module Telegram
       class ParseError < Error; end
 
       class KeyboardMarkupError < Error; end
+
+      class BotanError < Error; end
     end
   end
 end

@@ -1,9 +1,5 @@
 module Telegram::Bot
   class Botan
-    require 'net/http'
-    require 'net/https'
-    require 'json'
-
     API_URL = 'https://api.botan.io'.freeze
 
     def initialize(token = nil)
@@ -11,13 +7,17 @@ module Telegram::Bot
     end
 
     def track(uid, message, name)
-      response = Faraday.new(url: API_URL).post do |req|
-        req.url "/track?token=#{@token}&uid=#{uid}&name=#{name}"
-        req.headers['Content-Type'] = 'application/json'
-        req.body = JSON.dump({text: message})
-      end
+      begin
+        response = Faraday.new(url: API_URL).post do |req|
+          req.url "/track?token=#{@token}&uid=#{uid}&name=#{name}"
+          req.headers['Content-Type'] = 'application/json'
+          req.body = JSON.dump({text: message})
+        end
 
-      JSON.parse(response.body)
+        JSON.parse(response.body)
+      rescue => e
+        raise Telegram::Bot::Exceptions::BotanError.new(e.message)
+      end
     end
   end
 end
