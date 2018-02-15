@@ -1,15 +1,15 @@
 module Telegram
   module Bot
-    module Exceptions
-      class Error < StandardError; end
+    class Error < StandardError; end
 
-      class ResponseError < Error; end
+    class ResponseError < Error; end
 
-      class ParseError < Error; end
+    class ParseError < Error; end
 
-      class KeyboardMarkupError < Error; end
+    class KeyboardMarkupError < Error; end
 
-      class BotanError < Error; end
-    end
+    class LoginError < Error; end
+
+    class BotanError < Error; end
   end
 end

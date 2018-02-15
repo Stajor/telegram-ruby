@@ -12,7 +12,7 @@ module Telegram::Bot::Types
           elsif b.is_a?(Hash)
             InlineKeyboardButton.new(b)
           else
-            raise Telegram::Bot::Exceptions::KeyboardMarkupError
+            raise Telegram::Bot::KeyboardMarkupError
                       .new('Attributes must be Array of Array of Telegram::Bot::Types::KeyboardButton or Hash')
           end
         end

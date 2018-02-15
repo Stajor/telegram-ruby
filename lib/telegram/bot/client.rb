@@ -45,7 +45,7 @@ module Telegram::Bot
         end
       end
 
-      raise Exceptions::ParseError.new('Can not parse request') unless @message
+      raise Telegram::Bot::ParseError.new('Can not parse request') unless @message
     end
 
     def pull_command(text)

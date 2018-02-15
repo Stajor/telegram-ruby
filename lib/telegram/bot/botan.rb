@@ -16,7 +16,7 @@ module Telegram::Bot
 
         JSON.parse(response.body)
       rescue => e
-        raise Telegram::Bot::Exceptions::BotanError.new(e.message)
+        raise Telegram::Bot::BotanError.new(e.message)
       end
     end
   end

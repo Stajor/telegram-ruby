@@ -236,7 +236,7 @@ module Telegram
         body      = response.body
 
         if Bot.configuration.raise_exceptions && (response.status != 200 || body['ok'] != true)
-          raise Exceptions::ResponseError.new(body['description'])
+          raise Telegram::Bot::ResponseError.new(body['description'])
         end
 
         if type_obj.nil?

@@ -17,7 +17,7 @@ RSpec.describe Telegram::Bot::Api do
       let(:token) { '1:invalid_token' }
 
       it 'raises an error' do
-        expect { api_call }.to raise_error(Telegram::Bot::Exceptions::ResponseError)
+        expect { api_call }.to raise_error(Telegram::Bot::ResponseError)
       end
     end
   end
