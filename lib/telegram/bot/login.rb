@@ -7,7 +7,7 @@ module Telegram::Bot
       auth_data = auth_data.slice(:auth_date, :first_name, :id, :last_name, :photo_url, :username)
       check_string = auth_data.map {|k, v| "#{k}=#{v}" }.sort.join("\n")
 
-      secret_key = OpenSSL::Digest::SHA256.new.digest(Bot.configuration.token)
+      secret_key = OpenSSL::Digest::SHA256.new.digest(Telegram::Bot.configuration.token)
       hash = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), secret_key, check_string)
 
       raise Telegram::Bot::LoginError.new('Data is NOT from Telegram') if (hash.casecmp(check_hash) != 0)
