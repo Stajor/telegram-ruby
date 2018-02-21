@@ -26,7 +26,7 @@ module Telegram
       end
 
       def getUpdates(options = {})
-        request('getWebhookInfo', options, Types::Update, true)
+        request('getUpdates', options, Types::Update, true)
       end
 
       def getFile(file_id)
