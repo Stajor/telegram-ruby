@@ -16,7 +16,7 @@ module Telegram::Bot::Types
     end
 
     def text_entities=(attributes)
-      @text_entities = MessageEntity.new(attributes)
+      @text_entities = attributes.map {|attr| MessageEntity.new(attr) }
     end
 
     def animation=(attributes)
